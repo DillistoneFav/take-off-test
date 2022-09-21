@@ -1,0 +1,49 @@
+{
+  "navbar": {
+    "logo": "Contacts",
+    "language": "Language",
+    "languageExactly": "EN",
+    "signedAs": "Signed as:",
+    "popoverLogoutText": "Are you sure want no log out?"
+  },
+  "popoverContent": {
+    "button": "Confirm"
+  },
+  "authPage": {
+    "login": "Login",
+    "registration": "Registration",
+    "phoneNumber": "Phone Number",
+    "email": "Email",
+    "password": "Password",
+    "error": "Please fill all fields!",
+    "logIn": "Log In",
+    "haveNoAcc": "Have not an account yet? ",
+    "signUp": "Sign Up",
+    "haveAcc": "Already have an account? ",
+    "signIn": "Sign In"
+  },
+  "contactsPage": {
+    "title": "My contacts",
+    "searchInputPlaceholder": "Contact Name",
+    "resetFilters": "Reset filters",
+    "createContact": "Create contact",
+    "dontHaveAcc": "Looks like you still dont have any contacts? Lets create one!"
+  },
+  "modalComponent": {
+    "fillLabels": "Fill at least Name and Phone labels!",
+    "editContact": "Edit contact",
+    "createContact": "Create contact"
+  },
+  "utils": {
+    "name": "Name",
+    "surname": "Surname",
+    "phone": "Phone",
+    "email": "Email",
+    "edit": "Edit",
+    "create": "Create",
+    "cancel": "Cancel",
+    "incorrectPass": "Incorrect Username or Password!",
+    "delete": "Delete",
+    "deleteThis": "Delete this one?"
+  }
+}

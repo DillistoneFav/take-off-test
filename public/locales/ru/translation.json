@@ -1,0 +1,49 @@
+{
+  "navbar": {
+    "logo": "Контакты",
+    "language": "Язык",
+    "languageExactly": "RU",
+    "signedAs": "Пользователь:",
+    "popoverLogoutText": "Вы действительно хотите выйти?"
+  },
+  "popoverContent": {
+    "button": "Подтвердить"
+  },
+  "authPage": {
+    "login": "Авторизация",
+    "registration": "Регистрация",
+    "phoneNumber": "Телефон",
+    "email": "Email",
+    "password": "Пароль",
+    "error": "Пожалуйста заполните все поля!",
+    "logIn": "Войти",
+    "haveNoAcc": "Еще нет аккаунта? ",
+    "signUp": "Зарегистрироваться",
+    "haveAcc": "Уже есть аккаунт? ",
+    "signIn": "Войти"
+  },
+  "contactsPage": {
+    "title": "Мои контакты",
+    "searchInputPlaceholder": "Имя контакта",
+    "resetFilters": "Сбросить фильтры",
+    "createContact": "Создать контакт",
+    "dontHaveAcc": "Кажется у вас все еще нет контактов? Давайте создадим их!"
+  },
+  "modalComponent": {
+    "fillLabels": "Заполните как минимум Имя и Телефон!",
+    "editContact": "Обновить контакт",
+    "createContact": "Создать контакт"
+  },
+  "utils": {
+    "name": "Имя",
+    "surname": "Фамилия",
+    "phone": "Телефон",
+    "email": "Email",
+    "edit": "Обновить",
+    "create": "Создать",
+    "cancel": "Закрыть",
+    "incorrectPass": "Неверное имя пользователя или пароль!",
+    "delete": "Удалить",
+    "deleteThis": "Удалить этот контакт?"
+  }
+}

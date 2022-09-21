@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "phone": "+79115084241",
+      "email": "DilliWork@yandex.ru",
+      "password": "admin"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 2,
+      "userId": 1,
+      "Name": "Max1",
+      "Surname": "Shadrin",
+      "Phone": "+7(921)643-72-97",
+      "Email": "Max12@gmail.com"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "Name": "Kirill",
+      "Surname": "Melnikov",
+      "Phone": "+7(911)508-42-41",
+      "Email": "DilliWork@yandex.ru"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "Name": "Egor",
+      "Surname": "Frisk",
+      "Phone": "+7(921)643-72-97",
+      "Email": "EgorFrisk@mail.ru"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "Name": "Danil",
+      "Surname": "Danilov",
+      "Phone": "+7(283)511-27-17",
+      "Email": "zaukifriffeippa-1082@mail.ru"
+    },
+    {
+      "userId": 1,
+      "Name": "1",
+      "Surname": "",
+      "Phone": "1",
+      "Email": "",
+      "id": 12
+    }
+  ]
+}

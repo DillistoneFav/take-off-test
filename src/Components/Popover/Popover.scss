@@ -1,0 +1,26 @@
+.popover-content{
+  padding: 0.5rem 1rem;
+  .buttonsConfirmContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--background-color);
+    .confirmButton{
+      padding: 0;
+      height: 30px;
+      width: 90px;
+      margin-right: 10px;
+      background: var(--primary-color);
+      outline: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      color: #fff;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
