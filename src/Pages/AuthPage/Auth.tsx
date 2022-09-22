@@ -42,6 +42,7 @@ const Auth: FC = observer(() => {
                 navigate(CONTACTS_ROUTE)
         })}
         else if (authData.email.length && authData.phone.length) {
+            authData.phone = authData.phone.replace(/[()_\s]/g,"")
             Registration(authData.name, authData.phone, authData.email, authData.password).then(() => {
                 navigate(CONTACTS_ROUTE)
         })}
@@ -64,7 +65,7 @@ const Auth: FC = observer(() => {
                     <Input
                         value={authData.name}
                         handleChangeInputValue={handleChange('name')}
-                        placeholder={t("authPage.login")}
+                        placeholder={t("utils.name")}
                     />
                     {!isLogin &&
                         <InputMask

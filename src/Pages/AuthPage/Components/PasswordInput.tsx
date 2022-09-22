@@ -38,7 +38,7 @@ const PasswordInput: FC<LoginInputProps> = ({password, handleChange}) => {
                         </IconButton>
                     </InputAdornment>
                 }
-                label={`${t("authPage.password")}`}
+                label={t("authPage.password")}
             />
         </FormControl>
     );

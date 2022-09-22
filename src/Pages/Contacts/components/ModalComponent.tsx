@@ -6,6 +6,7 @@ import {IContact} from "../../../Interfaces/IContact";
 import ModalStore from "../../../Store/ModalStore";
 import {createContact, editContact} from "../../../API/ContactsApi";
 import {useTranslation} from "react-i18next";
+import InputMask from "react-input-mask";
 
 const outerTheme = createTheme({
     palette: {
@@ -66,7 +67,13 @@ const ModalComponent = observer(() => {
                             <ThemeProvider theme={outerTheme}>
                                 <Input placeholder={t("utils.name")} value={editingObject.Name} handleChangeInputValue={handleChangeInputValue('Name')}/>
                                 <Input placeholder={t("utils.surname")} value={editingObject.Surname} handleChangeInputValue={handleChangeInputValue('Surname')}/>
-                                <Input placeholder={t("utils.phone")} value={editingObject.Phone} handleChangeInputValue={handleChangeInputValue('Phone')}/>
+                                <InputMask
+                                    mask="+7(999) 999 99 99"
+                                    value={editingObject.Phone}
+                                    onChange={handleChangeInputValue('Phone')}
+                                    className={"phone-input"}
+                                    placeholder={t("authPage.phoneNumber")}
+                                />
                                 <Input placeholder={t("utils.email")} value={editingObject.Email} handleChangeInputValue={handleChangeInputValue('Email')}/>
                             </ThemeProvider>
                         </div>

@@ -10,12 +10,13 @@ import ContactsStore from "../../Store/ContactsStore";
 import {getContacts, setTotalPages} from "../../API/ContactsApi";
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import {useTranslation} from "react-i18next";
+import Loader from "../../Components/Loader/Loader";
 
 const ContactsPage = observer(() => {
     const {t} = useTranslation()
     const [name, setName] = useState<string>("")
 
-    const {Contacts, IsFiltered, PageCount, CurrentPage} = ContactsStore
+    const {Contacts, IsFiltered, PageCount, CurrentPage, IsLoading} = ContactsStore
 
     const handleOpen = () => {
         ModalStore.setEditingId(-1)
@@ -31,15 +32,18 @@ const ContactsPage = observer(() => {
     }
 
     useEffect(() => {
-        getContacts(CurrentPage)
         setTotalPages()
     }, [])
 
     useEffect(() => {
-        getContacts(CurrentPage)
+        getContacts(CurrentPage).then(() => {
+            setTimeout(() => {
+                ContactsStore.setIsLoading(false)
+            }, 500)
+        })
     }, [CurrentPage])
 
-    return (
+    return !IsLoading ? (
         <div className={"contactsPage"}>
             <div className={"container"}>
                 <h1>{`${t("contactsPage.title")}`}</h1>
@@ -62,7 +66,9 @@ const ContactsPage = observer(() => {
             </div>
             <ModalComponent/>
         </div>
-    );
+    ) : (
+        <Loader/>
+    )
 });
 
 export default ContactsPage;

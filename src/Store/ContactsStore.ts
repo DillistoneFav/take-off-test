@@ -6,8 +6,10 @@ class ContactsStore {
     private _pageCount: number
     private _currentPage: number
     private _isFiltered: boolean
+    private _isLoading: boolean
 
     constructor() {
+        this._isLoading = true
         this._isFiltered = false
         this._currentPage = 1
         this._pageCount = 1
@@ -15,6 +17,9 @@ class ContactsStore {
         makeAutoObservable(this)
     }
 
+    setIsLoading(payload: boolean) {
+        this._isLoading = payload
+    }
     setCurrentPage(payload: number) {
         return this._currentPage = payload
     }
@@ -25,7 +30,8 @@ class ContactsStore {
         return this._contacts = payload
     }
     addContact(payload: IContact) {
-        return this._contacts = [...this._contacts, payload]
+        let newArr = [...this._contacts, payload]
+        return this._contacts = newArr
     }
     removeContact(id: number) {
         let newArr = this._contacts.filter((item) => {
@@ -37,6 +43,9 @@ class ContactsStore {
         return this._isFiltered = payload;
     }
 
+    get IsLoading() {
+        return this._isLoading
+    }
     get IsFiltered() {
         return this._isFiltered
     }

@@ -86,8 +86,9 @@ export const deleteContact = async (id: number) => {
             if (ContactsStore.Contacts.length === 1 && ContactsStore.PageCount > 1) {
                 ContactsStore.setCurrentPage(ContactsStore.CurrentPage-1)
                 ContactsStore.setPageCount(ContactsStore.PageCount-1)
-            } else if (ContactsStore.CurrentPage < ContactsStore.PageCount && ContactsStore.Contacts.length > 1) {
+            } else if (ContactsStore.CurrentPage < ContactsStore.PageCount && ContactsStore.Contacts.length === 5) {
                 getContacts(ContactsStore.CurrentPage)
+                setTotalPages()
             } else {
                 ContactsStore.removeContact(id)
             }
